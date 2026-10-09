@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe0f0">
+<title>روز جهانی دختر مبارک 🎀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --pink-1: #ff6b9d;
+    --pink-2: #d63384;
+    --pink-3: #ffb6d5;
+    --pink-soft: #ffe0f0;
+    --purple-1: #a855f7;
+    --text-dark: #3d1a2e;
+    --text-mid: #7a3a5e;
+    --text-soft: #a64d79;
+    --shadow-sm: 0 4px 14px rgba(214, 51, 132, 0.12);
+    --shadow-md: 0 12px 40px rgba(214, 51, 132, 0.18);
+    --shadow-lg: 0 24px 70px rgba(214, 51, 132, 0.28);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    background: #ffe0f0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--text-dark);
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============ پس‌زمینه ============ */
+  .bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    background: linear-gradient(135deg, #ffe0f0 0%, #ffd1e8 25%, #f3d5ff 50%, #ffd1e8 75%, #ffe0f0 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 18s ease infinite;
+  }
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.55;
+    z-index: -2;
+    pointer-events: none;
+    animation: blobFloat 20s ease-in-out infinite;
+  }
+  .blob-1 { width: 500px; height: 500px; background: radial-gradient(circle, #ff6b9d, transparent 70%); top: -150px; right: -150px; }
+  .blob-2 { width: 450px; height: 450px; background: radial-gradient(circle, #a855f7, transparent 70%); bottom: -120px; left: -120px; animation-delay: -7s; }
+  .blob-3 { width: 380px; height: 380px; background: radial-gradient(circle, #ffd700, transparent 70%); top: 40%; left: 40%; opacity: 0.3; animation-delay: -14s; }
+  @keyframes blobFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33%      { transform: translate(40px, -30px) scale(1.1); }
+    66%      { transform: translate(-30px, 40px) scale(0.95); }
+  }
+
+  .dot-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(circle, rgba(214, 51, 132, 0.12) 1px, transparent 1px);
+    background-size: 32px 32px;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+    pointer-events: none;
+  }
+
+  .particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    animation: particleFloat linear infinite;
+    will-change: transform, opacity;
+  }
+  @keyframes particleFloat {
+    0%   { transform: translateY(100vh) translateX(0) scale(0.3) rotate(0deg); opacity: 0; }
+    10%  { opacity: 0.85; }
+    90%  { opacity: 0.85; }
+    100% { transform: translateY(-15vh) translateX(40px) scale(1.1) rotate(360deg); opacity: 0; }
+  }
+
+  /* ============ کانتینر ============ */
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px 22px 100px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: heroReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes heroReveal {
+    from { opacity: 0; transform: translateY(-40px); filter: blur(10px); }
+    to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+
+  .hero .top-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6));
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--pink-2);
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-bottom: 24px;
+  }
+  .hero .top-badge .dot {
+    width: 8px; height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22c55e;
+    animation: pulseDot 2s infinite;
+  }
+  @keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    background: linear-gradient(135deg, #d63384 0%, #a855f7 50%, #d63384 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shineText 4s linear infinite;
+    letter-spacing: -0.5px;
+  }
+  @keyframes shineText {
+    to { background-position: 200% center; }
+  }
+
+  .hero .subtitle {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    line-height: 2;
+    font-weight: 500;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .hero .divider {
+    width: 80px;
+    height: 3px;
+    margin: 24px auto 0;
+    background: linear-gradient(90deg, transparent, var(--pink-1), transparent);
+    border-radius: 3px;
+  }
+
+  /* ============ شمارش معکوس ============ */
+  .countdown-section {
+    position: relative;
+    background: linear-gradient(145deg, rgba(255,255,255,0.72), rgba(255,255,255,0.42));
+    border-radius: 32px;
+    padding: 36px 24px 32px;
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.9);
+    margin-bottom: 36px;
+    overflow: hidden;
+    animation: revealUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+  }
+
+  .countdown-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 10%; right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--pink-1), var(--purple-1), var(--pink-1), transparent);
+    filter: blur(1px);
+  }
+
+  .countdown-section .title {
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .countdown-section .title .icon {
+    font-size: 1.1rem;
+    animation: spinSlow 8s linear infinite;
+    display: inline-block;
+  }
+  @keyframes spinSlow {
+    to { transform: rotate(360deg); }
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    direction: ltr;
+  }
+
+  .time-box {
+    position: relative;
+    background: linear-gradient(160deg, #ffffff 0%, #fff5fa 100%);
+    border-radius: 20px;
+    padding: 20px 8px 16px;
+    min-width: 82px;
+    flex: 1;
+    max-width: 108px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(214, 51, 132, 0.15), 0 2px 6px rgba(214, 51, 132, 0.08);
+    border: 1.5px solid rgba(255, 255, 255, 1);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+  }
+
+  .time-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.8), transparent);
+    pointer-events: none;
+  }
+
+  .time-box:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 20px 45px rgba(214, 51, 132, 0.28), 0 4px 10px rgba(214, 51, 132, 0.15);
+  }
+
+  .time-box .num {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--pink-2);
+    line-height: 1;
+    display: block;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 8px rgba(214, 51, 132, 0.15);
+  }
+
+  .time-box .label {
+    position: relative;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    margin-top: 10px;
+    display: block;
+    letter-spacing: 0.5px;
+  }
+
+  .countdown .sep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--pink-3);
+    padding-bottom: 20px;
+    animation: blink 2s ease-in-out infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.3; }
+  }
+
+  /* ============ کارت تبریک ============ */
+  .greeting {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(160deg, #ffffff 0%, #fff5fa 60%, #ffe8f3 100%);
+    border-radius: 28px;
+    padding: 40px 28px;
+    margin-bottom: 36px;
+    border: 1.5px solid rgba(255, 182, 213, 0.6);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    animation: revealUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+  }
+
+  .greeting .big {
+    display: block;
+    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--pink-2), var(--purple-1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .greeting p {
+    font-size: 1rem;
+    line-height: 2.1;
+    color: var(--text-mid);
+    font-weight: 500;
+  }
+
+  /* ============ دکمه هدیه ============ */
+  .gift-btn-wrap {
+    text-align: center;
+    margin-top: 36px;
+    animation: revealUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.8s both;
+  }
+
+  .gift-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 60px;
+    font-size: 1.15rem;
+    font-weight: 800;
+    font-family: inherit;
+    color: #fff;
+    background: linear-gradient(135deg, #d63384 0%, #ff6b9d 50%, #a855f7 100%);
+    background-size: 200% auto;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 14px 40px rgba(214, 51, 132, 0.42), 0 4px 12px rgba(214, 51, 132, 0.25);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+    letter-spacing: 0.3px;
+  }
+
+  .gift-btn:hover {
+    background-position: right center;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 22px 55px rgba(214, 51, 132, 0.55), 0 6px 16px rgba(214, 51, 132, 0.35);
+  }
+
+  .gift-btn:active {
+    transform: translateY(-2px) scale(0.99);
+  }
+
+  .gift-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transition: left 0.7s;
+  }
+  .gift-btn:hover::before { left: 100%; }
+
+  /* ============ فرم ============ */
+  .form-section {
+    background: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+    border-radius: 32px;
+    padding: 40px 32px;
+    margin-top: 36px;
+    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,1);
+    border: 1.5px solid rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .form-header .form-icon {
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    animation: bounceSoft 3s ease-in-out infinite;
+  }
+  @keyframes bounceSoft {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+  }
+  .form-header h2 {
+    color: var(--pink-2);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .form-header .form-sub {
+    color: var(--text-soft);
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+
+  .form-group {
+    margin-bottom: 22px;
+    animation: fadeIn 0.5s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-align: right;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-mid);
+    font-size: 0.92rem;
+  }
+  .form-group label .req { color: var(--pink-2); font-weight: 800; }
+
+  .input-wrap { position: relative; }
+  .input-wrap .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 15px 46px 15px 16px;
+    border: 2px solid #f8c8dc;
+    border-radius: 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #fff;
+    color: var(--text-dark);
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 2px 8px rgba(214, 51, 132, 0.06);
+  }
+  .form-group input::placeholder { color: #c99bb0; font-weight: 400; }
+  .form-group select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23a64d79' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 16px center;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--pink-2);
+    box-shadow: 0 0 0 4px rgba(214, 51, 132, 0.12), 0 6px 20px rgba(214, 51, 132, 0.15);
+    transform: translateY(-1px);
+  }
+
+  .input-wrap:focus-within .input-icon { opacity: 1; }
+
+  /* ============ دکمه ثبت ============ */
+  .submit-btn {
+    position: relative;
+    width: 100%;
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: inherit;
+    color: #fff;
+    background: linear-gradient(135deg, #d63384, #ff6b9d, #a855f7);
+    background-size: 200% auto;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    margin-top: 10px;
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.35);
+    overflow: hidden;
+    letter-spacing: 0.3px;
+  }
+  .submit-btn:hover {
+    background-position: right center;
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(214, 51, 132, 0.5);
+  }
+  .submit-btn:active { transform: translateY(-1px); }
+  .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+  /* ============ کارت نتیجه ============ */
+  .result-card {
+    position: relative;
+    background: linear-gradient(160deg, #ffffff 0%, #fff5fa 100%);
+    border-radius: 32px;
+    padding: 40px 30px;
+    margin-top: 36px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid #ffb6d5;
+    animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+  }
+
+  .result-card .success-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 16px;
+    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.4);
+    animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+  @keyframes popIn {
+    from { transform: scale(0); }
+    to   { transform: scale(1); }
+  }
+
+  .result-card h2 {
+    color: var(--pink-2);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .result-card .success-note {
+    color: var(--text-soft);
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+
+  .result-rows {
+    background: #fff8fc;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin-bottom: 24px;
+  }
+
+  .result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px dashed #f8c8dc;
+  }
+  .result-row:last-child { border-bottom: none; }
+  .result-row .k {
+    color: var(--text-soft);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .result-row .v {
+    color: var(--text-dark);
+    font-weight: 800;
+    font-size: 1rem;
+    text-align: left;
+    max-width: 55%;
+    word-break: break-word;
+  }
+  .result-row .v.code {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #ffe0f0, #ffd1e8);
+    padding: 6px 14px;
+    border-radius: 10px;
+    color: var(--pink-2);
+    letter-spacing: 1.5px;
+    font-size: 0.95rem;
+    border: 1px solid #ffb6d5;
+  }
+
+  .screenshot-note {
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #fff0f7, #ffe0f0);
+    border-radius: 18px;
+    color: var(--text-mid);
+    font-size: 0.92rem;
+    line-height: 2;
+    border: 1px dashed #ffb6d5;
+  }
+  .screenshot-note strong { color: var(--pink-2); }
+
+  .again-btn {
+    margin-top: 22px;
+    padding: 14px 32px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--pink-2);
+    background: #fff;
+    border: 2px solid var(--pink-3);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .again-btn:hover {
+    background: var(--pink-soft);
+    border-color: var(--pink-2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(214, 51, 132, 0.2);
+  }
+
+  /* ============ کمکی ============ */
+  .hidden { display: none !important; }
+
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(40px); filter: blur(6px); }
+    to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+
+  /* ============ موبایل ============ */
+  @media (max-width: 520px) {
+    .container { padding: 40px 16px 80px; }
+    .countdown-section { padding: 28px 16px 24px; border-radius: 26px; }
+    .countdown { gap: 8px; }
+    .time-box { min-width: 60px; padding: 16px 4px 12px; border-radius: 16px; }
+    .time-box .num { font-size: 1.7rem; }
+    .time-box .label { font-size: 0.65rem; margin-top: 8px; }
+    .countdown .sep { font-size: 1.2rem; padding-bottom: 16px; }
+    .greeting { padding: 32px 22px; border-radius: 24px; }
+    .greeting p { font-size: 0.95rem; }
+    .gift-btn { padding: 18px 42px; font-size: 1.05rem; }
+    .form-section { padding: 32px 22px; border-radius: 26px; }
+    .result-card { padding: 32px 22px; border-radius: 26px; }
+    .result-row .v { font-size: 0.92rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+<div class="dot-grid"></div>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="top-badge">
+      <span class="dot"></span>
+      <span>۱۱ اکتبر ۲۰۲۶</span>
+    </div>
+    <h1>روز جهانی دختر مبارک</h1>
+    <p class="subtitle">
+      امروز، روزِ توئه<br>
+      دختری که دنیا رو قشنگ‌تر می‌کنه 🌸
+    </p>
+    <div class="divider"></div>
+  </div>
+
+  <!-- شمارش معکوس -->
+  <div class="countdown-section" id="countdownSection">
+    <div class="title">
+      <span class="icon">⏳</span>
+      <span>تا روزِ تو، دختر قشنگ...</span>
+    </div>
+    <div class="countdown">
+      <div class="time-box"><span class="num" id="days">۰</span><span class="label">روز</span></div>
+      <div class="sep">:</div>
+      <div class="time-box"><span class="num" id="hours">۰</span><span class="label">ساعت</span></div>
+      <div class="sep">:</div>
+      <div class="time-box"><span class="num" id="minutes">۰</span><span class="label">دقیقه</span></div>
+      <div class="sep">:</div>
+      <div class="time-box"><span class="num" id="seconds">۰</span><span class="label">ثانیه</span></div>
+    </div>
+  </div>
+
+  <!-- تبریک -->
+  <div class="greeting">
+    <span class="big">✨ تو خاصی، تو بی‌همتایی ✨</span>
+    <p>
+      دختر بودن یعنی لطافتِ باران،<br>
+      یعنی رنگی که هیچ‌وقت محو نمی‌شه،<br>
+      یعنی صدای قلبِ دنیا 🌷<br><br>
+      امروز روزِ توئه؛ بدرخش، بخند، بجنگ 💪💖
+    </p>
+  </div>
+
+  <!-- دکمه هدیه -->
+  <div class="gift-btn-wrap" id="giftWrap">
+    <button class="gift-btn" onclick="showForm()">
+      <span>🎁</span>
+      <span>درخواست هدیه کن</span>
+    </button>
+  </div>
+
+  <!-- فرم -->
+  <div class="form-section hidden" id="formSection">
+    <div class="form-header">
+      <div class="form-icon">🌷</div>
+      <h2>بگو چی می‌خوای!</h2>
+      <p class="form-sub">دخترِ قشنگ، دلخواهت رو بگو تا برات فراهم کنیم</p>
+    </div>
+
+    <div class="form-group">
+      <label for="name">اسمت چیه؟ <span class="req">*</span></label>
+      <div class="input-wrap">
+        <input type="text" id="name" placeholder="مثلاً سارا" maxlength="40">
+        <span class="input-icon">👧</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="gift">چی می‌خوای؟ <span class="req">*</span></label>
+      <div class="input-wrap">
+        <select id="gift">
+          <option value="">انتخاب کن...</option>
+          <option value="🌹 گل">🌹 گل</option>
+          <option value="🧴 عطر">🧴 عطر</option>
+          <option value="📚 کتاب">📚 کتاب</option>
+          <option value="🧸 عروسک">🧸 عروسک</option>
+          <option value="💄 لوازم آرایشی">💄 لوازم آرایشی</option>
+          <option value="🎫 کارت هدیه">🎫 کارت هدیه</option>
+          <option value="⌚ ساعت">⌚ ساعت</option>
+          <option value="📿 دستبند / جواهرات">📿 دستبند / جواهرات</option>
+          <option value="👗 لباس">👗 لباس</option>
+          <option value="🍰 کیک و شیرینی">🍰 کیک و شیرینی</option>
+          <option value="🎁 سایر">🎁 سایر</option>
+        </select>
+        <span class="input-icon">🎁</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="provider">کی برات تهیه کنه؟ <span class="req">*</span></label>
+      <div class="input-wrap">
+        <input type="text" id="provider" placeholder="مثلاً بابا، مامان، برادر..." maxlength="40">
+        <span class="input-icon">👤</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="note">توضیح بیشتر (اختیاری)</label>
+      <div class="input-wrap">
+        <input type="text" id="note" placeholder="مثلاً رنگ صورتی باشه 🌸" maxlength="80">
+        <span class="input-icon">📝</span>
+      </div>
+    </div>
+
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+      ثبت درخواست ✨
+    </button>
+  </div>
+
+  <!-- نتیجه -->
+  <div class="result-card hidden" id="resultCard">
+    <div class="success-icon">✓</div>
+    <h2>درخواستت ثبت شد!</h2>
+    <p class="success-note">دختر قشنگ، آرزوت ثبت شد و برای تهیه‌کننده ارسال گردید</p>
+
+    <div class="result-rows">
+      <div class="result-row">
+        <span class="k">👧 اسم</span>
+        <span class="v" id="rName">—</span>
+      </div>
+      <div class="result-row">
+        <span class="k">🎁 هدیه</span>
+        <span class="v" id="rGift">—</span>
+      </div>
+      <div class="result-row">
+        <span class="k">👤 تهیه‌کننده</span>
+        <span class="v" id="rProvider">—</span>
+      </div>
+      <div class="result-row" id="noteRow">
+        <span class="k">📝 توضیح</span>
+        <span class="v" id="rNote">—</span>
+      </div>
+      <div class="result-row">
+        <span class="k">🔢 کد پیگیری</span>
+        <span class="v code" id="rCode">—</span>
+      </div>
+    </div>
+
+    <div class="screenshot-note">
+      📸 از این کارت <strong>اسکرین‌شات</strong> بگیر<br>
+      و برای کسی که می‌خوای هدیه رو برات تهیه کنه بفرست 💌
+    </div>
+
+    <button class="again-btn" onclick="resetForm()">درخواست جدید</button>
+  </div>
+
+</div>
+
+<script>
+  /* =====================================================
+     URL Apps Script
+     ===================================================== */
+  const API_URL = 'https://script.google.com/macros/s/AKfycbzDyQo2k43EInaOClb-yyKEPHYdMU4fT7JcAoE_eEjiPILON-ylY4P4k_xtDKtCzG-C/exec';
+
+  /* =====================================================
+     شمارش معکوس تا ۱۹ مهر ۱۴۰۵
+     ===================================================== */
+  const TARGET_DATE = new Date('2026-10-11T00:00:00+03:30').getTime();
+
+  const els = {
+    days: document.getElementById('days'),
+    hours: document.getElementById('hours'),
+    minutes: document.getElementById('minutes'),
+    seconds: document.getElementById('seconds'),
+    countdownSection: document.getElementById('countdownSection'),
+  };
+
+  function toFa(n) {
+    return String(n).padStart(2, '0').replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+  }
+
+  function updateCountdown() {
+    const diff = TARGET_DATE - Date.now();
+
+    if (diff <= 0) {
+      els.countdownSection.querySelector('.title').innerHTML = '<span class="icon">🎉</span><span>امروز روزِ توئه!</span>';
+      els.days.textContent = '۰۰';
+      els.hours.textContent = '۰۰';
+      els.minutes.textContent = '۰۰';
+      els.seconds.textContent = '۰۰';
+      return;
+    }
+
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+
+    els.days.textContent    = toFa(d);
+    els.hours.textContent   = toFa(h);
+    els.minutes.textContent = toFa(m);
+    els.seconds.textContent = toFa(s);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* =====================================================
+     ذرات شناور (قلب SVG)
+     ===================================================== */
+  const HEART_SVG = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+
+  const COLORS = ['#ff6b9d', '#d63384', '#a855f7', '#ffb6d5', '#ffd700', '#ff4081'];
+
+  function spawnParticle() {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = 12 + Math.random() * 20;
+    const color = COLORS[Math.floor(Math.random() * COLORS.length)];
+
+    p.innerHTML = HEART_SVG;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.color = color;
+    p.style.fill = color;
+    p.querySelector('svg').style.fill = color;
+    p.querySelector('svg').style.width = '100%';
+    p.querySelector('svg').style.height = '100%';
+    p.style.animationDuration = (7 + Math.random() * 6) + 's';
+    p.style.filter = `drop-shadow(0 0 6px ${color})`;
+
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 14000);
+  }
+
+  for (let i = 0; i < 3; i++) {
+    setTimeout(spawnParticle, i * 300);
+  }
+  setInterval(spawnParticle, 800);
+
+  /* =====================================================
+     فرم
+     ===================================================== */
+  const giftWrap    = document.getElementById('giftWrap');
+  const formSection = document.getElementById('formSection');
+  const resultCard  = document.getElementById('resultCard');
+  const submitBtn   = document.getElementById('submitBtn');
+
+  function showForm() {
+    giftWrap.classList.add('hidden');
+    formSection.classList.remove('hidden');
+    formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function generateCode() {
+    return 'GIFT-2026-' + Math.floor(1000 + Math.random() * 9000);
+  }
+
+  async function submitForm() {
+    const name     = document.getElementById('name').value.trim();
+    const gift     = document.getElementById('gift').value;
+    const provider = document.getElementById('provider').value.trim();
+    const note     = document.getElementById('note').value.trim();
+
+    if (!name)     return alert('لطفاً اسمت رو بنویس 🌸');
+    if (!gift)     return alert('لطفاً هدیه‌ات رو انتخاب کن 🎁');
+    if (!provider) return alert('لطفاً بنویس کی برات تهیه کنه 👤');
+
+    const code = generateCode();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'در حال ثبت...';
+
+    document.getElementById('rName').textContent     = name;
+    document.getElementById('rGift').textContent     = gift;
+    document.getElementById('rProvider').textContent = provider;
+    document.getElementById('rCode').textContent     = code;
+
+    const noteRow = document.getElementById('noteRow');
+    if (note) {
+      document.getElementById('rNote').textContent = note;
+      noteRow.classList.remove('hidden');
+    } else {
+      noteRow.classList.add('hidden');
+    }
+
+    try {
+      await fetch(API_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({
+          name, gift, provider, note, code,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+      console.log('✅ گزارش ارسال شد');
+    } catch (err) {
+      console.warn('ارسال گزارش با خطا مواجه شد:', err);
+    }
+
+    formSection.classList.add('hidden');
+    resultCard.classList.remove('hidden');
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'ثبت درخواست ✨';
+  }
+
+  function resetForm() {
+    document.getElementById('name').value = '';
+    document.getElementById('gift').value = '';
+    document.getElementById('provider').value = '';
+    document.getElementById('note').value = '';
+
+    resultCard.classList.add('hidden');
+    formSection.classList.remove('hidden');
+    formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>
